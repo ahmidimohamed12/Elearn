@@ -8,7 +8,7 @@
 	<meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
 	<meta name="author" content="Bootlab">
 
-	<title>Spark - Responsive Admin &amp; Dashboard Template</title>
+	<title></title>
 
 	<!-- PICK ONE OF THE STYLES BELOW -->
 	<!-- <link href="css/modern.css" rel="stylesheet"> -->
@@ -38,7 +38,7 @@
 				<svg>
 					<use xlink:href="#ion-ios-pulse-strong"></use>
 				</svg>
-				Spark
+				Nutriana
 			</a>
 			<div class="sidebar-content">
 				<div class="sidebar-user">

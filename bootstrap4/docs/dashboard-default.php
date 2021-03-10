@@ -54,9 +54,7 @@
 						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 							<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Cours</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Categorie Cours</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cards</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-general.html">General</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-grid.html">Grid</a>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cours Page</a></li>
 							</li>
 						</ul>
 					</li>
@@ -268,7 +266,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Sales Today</h5>
+														<h5 class="card-title">Total Users</h5>
 													</div>
 
 													<div class="col-auto">
@@ -314,7 +312,7 @@
 											<div class="card-body">
 												<div class="row">
 													<div class="col mt-0">
-														<h5 class="card-title">Total Earnings</h5>
+														<h5 class="card-title">Top Levels</h5>
 													</div>
 
 													<div class="col-auto">
@@ -494,10 +492,11 @@
 									<thead>
 										<tr>
 											<th>Name</th>
-											<th class="d-none d-xl-table-cell">Start Date</th>
-											<th class="d-none d-xl-table-cell">End Date</th>
-											<th>Status</th>
-											<th class="d-none d-md-table-cell">Assignee</th>
+											<th class="d-none d-xl-table-cell">Login</th>
+											<th class="d-none d-xl-table-cell">Password</th>
+											<th>Email</th>
+											<th class="d-none d-md-table-cell">Date Invited</th>
+											<th>Role</th>
 										</tr>
 									</thead>
 									<tbody>

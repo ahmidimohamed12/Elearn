@@ -10,12 +10,6 @@
 
 	<title>Spark - Responsive Admin &amp; Dashboard Template</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
-
 	<!-- BEGIN SETTINGS -->
 	<!-- You can remove this after picking a style -->
 	<style>
