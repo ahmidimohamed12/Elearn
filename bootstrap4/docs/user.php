@@ -24,7 +24,7 @@
 	</div>
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
+			<a class="sidebar-brand" href="index.php">
 				<svg>
 					<use xlink:href="#ion-ios-pulse-strong"></use>
 				</svg>

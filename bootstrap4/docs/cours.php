@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +8,23 @@
 	<meta name="author" content="Bootlab">
 
 	<title>Nutriana</title>
-
-	<!-- You can remove this after picking a style -->
 	<style>
 		body {
 			opacity: 0;
 		}
 	</style>
 	<script src="js/settings.js"></script>
-	<!-- END SETTINGS -->
 </head>
-
 <body>
+    <?php 
+        include("./Config/db.php");
+    ?>
 	<div class="splash active">
 		<div class="splash-icon"></div>
 	</div>
-
 	<div class="wrapper">
-
-	<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
+		<nav id="sidebar" class="sidebar">
+			<a class="sidebar-brand" href="index.php">
 				<svg>
 					<use xlink:href="#ion-ios-pulse-strong"></use>
 				</svg>
@@ -60,17 +56,15 @@
 						</a>
 						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
 						<li class="sidebar-item"><a class="sidebar-link" href="user.php">Users</a></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Cours</a></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Categorie Cours</a></li>
-						<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cours Page</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="cours.php">Cours</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="Categorie.php">Categorie Cours</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cours Page</a></li>
+							</li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</nav>
-
-
-	<!-- Nav Appres -->
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex mr-2">
@@ -228,8 +222,84 @@
 				</div>
 
 			</nav>
+			<main class="content">
+				<div class="container-fluid">
+
+					<div class="header">
+						<h1 class="header-title">
+							Welcome back, Linda!
+						</h1>
+						<p class="header-subtitle">You have 24 new messages and 5 new notifications.</p>
+					</div>
+
+					<div class="row">
+						<div class="col-xl-6 col-xxl-7">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="user.php" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+									</div>
+									<h5 class="card-title mb-0">Cours</h5>
+								</div>
+								<div class="row">
+					<div class="col-2">
+
+					</div>
+					<div class="col-4">
+						<a href="Add_cours.php" class="btn btn-primary" >  
+							Create
+						</a>
+					</div>
+				</div>
+			<div style="margin-top:30px;" class="row" >
+			
+
+			<table style="margin-left: 55px;"  id="datatables-dashboard-projects" class="table table-striped my-0">
+									<thead>
+										<tr>
+											<th>Title</th>
+											<th class="d-none d-xl-table-cell">Icons</th>
+										</tr>
+
+									</thead>
+								<tbody>
+								<?php
+
+include("config/db.php");
+
+$sql = "SELECT * FROM cours";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+// output data of each row
+while($row = mysqli_fetch_assoc($result)) {	
+	?>
+	<tr>
+		<td><?php echo $row['title']; ?></td>
+		<td> <img src="data:image/jpeg;base64,'.base64_encode($row['icone'] ).'" height="200" width="200" class="img-thumnail" />   </td>
+	</tr>
+<?php	}
+} else {
+echo "0 results";
+}
+
+mysqli_close($conn);
+?>
+								</tbody>
+								</table>
+			</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 		</div>
+
 	</div>
+
 	<svg width="0" height="0" style="position:absolute">
 		<defs>
 			<symbol viewBox="0 0 512 512" id="ion-ios-pulse-strong">
@@ -240,6 +310,206 @@
 		</defs>
 	</svg>
 	<script src="js/app.js"></script>
+
+	<script>
+		$(function() {
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: 'line',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+							label: "Orders",
+							fill: true,
+							backgroundColor: window.theme.primary,
+							borderColor: window.theme.primary,
+							borderWidth: 2,
+							data: [3, 2, 3, 5, 6, 5, 4, 6, 9, 10, 8, 9]
+						},
+						{
+							label: "Sales ($)",
+							fill: true,
+							backgroundColor: "rgba(0, 0, 0, 0.05)",
+							borderColor: "rgba(0, 0, 0, 0.05)",
+							borderWidth: 2,
+							data: [5, 4, 10, 15, 16, 12, 10, 13, 20, 22, 18, 20]
+						}
+					]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					elements: {
+						point: {
+							radius: 0
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 5
+							},
+							display: true,
+							gridLines: {
+								color: "rgba(0,0,0,0)",
+								fontColor: "#fff"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: 'pie',
+				data: {
+					labels: ["Chrome", "Firefox", "IE", "Other"],
+					datasets: [{
+						data: [4401, 4003, 1589],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger,
+							"#E8EAED"
+						],
+						borderColor: "transparent"
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: 'bar',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			var mapData = {
+				"US": 298,
+				"SA": 200,
+				"DE": 220,
+				"FR": 540,
+				"CN": 120,
+				"AU": 760,
+				"BR": 550,
+				"IN": 200,
+				"GB": 120,
+			};
+			$('#world_map').vectorMap({
+				map: 'world_mill',
+				backgroundColor: "transparent",
+				zoomOnScroll: false,
+				regionStyle: {
+					initial: {
+						fill: '#e4e4e4',
+						"fill-opacity": 0.9,
+						stroke: 'none',
+						"stroke-width": 0,
+						"stroke-opacity": 0
+					}
+				},
+				series: {
+					regions: [{
+						values: mapData,
+						scale: [window.theme.primary],
+						normalizeFunction: 'polynomial'
+					}]
+				},
+			});
+			setTimeout(function() {
+				$(window).trigger('resize');
+			}, 350)
+		})
+	</script>
+	<script>
+		$(function() {
+			$('#datatables-dashboard-projects').DataTable({
+				pageLength: 6,
+				lengthChange: false,
+				bFilter: false,
+				autoWidth: false
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#datetimepicker-dashboard').datetimepicker({
+				inline: true,
+				sideBySide: false,
+				format: 'L'
+			});
+		});
+	</script>
 
 </body>
 

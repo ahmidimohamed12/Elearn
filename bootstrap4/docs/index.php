@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,300 +7,582 @@
 	<meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
 	<meta name="author" content="Bootlab">
 
-	<title>NUTRIANA</title>
-	<link href="css/modern.css" rel="stylesheet">
+	<title>Nutriana</title>
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<script src="js/settings.js"></script>
 </head>
-
 <body>
 	<div class="splash active">
 		<div class="splash-icon"></div>
 	</div>
-
-	<nav class="navbar navbar-expand navbar-dark absolute-top w-100 py-2">
-		<div class="container">
-			<a class="navbar-brand font-weight-bold" href="#">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<a class="sidebar-brand" href="index.php">
 				<svg>
 					<use xlink:href="#ion-ios-pulse-strong"></use>
 				</svg>
-				NUTRIANA
+				Nutriana
 			</a>
-			<a class="btn btn-success btn-pill my-2 ml-2" href="https://themes.getbootstrap.com/product/spark-responsive-admin-template/" target="_blank">
-				Purchase Now
-			</a>
-		</div>
-	</nav>
+			<div class="sidebar-content">
+				<div class="sidebar-user">
+					<img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
+					<div class="font-weight-bold">Linda Miller</div>
+				</div>
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Main
+					</li>
+					<li class="sidebar-item active">
+						<a href="#dashboards" data-toggle="collapse" class="sidebar-link">
+							<i class="align-middle mr-2 fas fa-fw fa-home"></i> <span class="align-middle">Dashboards</span>
+						</a>
+						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-parent="#sidebar">
 
-	<section class="pt-7 pb-5 landing-bg text-white overflow-hidden">
-		<div class="container py-4">
-			<div class="row">
-				<div class="col-xl-11 mx-auto">
-					<div class="row">
-						<div class="col-md-12 col-xl-8 text-center mx-auto">
-							<div class="d-block my-4">
-								<div class="my-4">
-									<a href="https://spark-bs5.bootlab.io/" target="_blank">
-										<img src="img/brands/bootstrap-5.png" alt="Bootstrap" width="150" class="align-middle mr-2" />
+						</ul>
+					</li>
+					<li class="sidebar-header">
+						Elements
+					</li>
+					<li class="sidebar-item">
+						<a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle mr-2 fas fa-fw fa-flask"></i> <span class="align-middle">User Interface</span>
+						</a>
+						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+						<li class="sidebar-item"><a class="sidebar-link" href="user.php">Users</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="cours.php">Cours</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="Categorie.php">Categorie Cours</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cours Page</a></li>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-theme">
+				<a class="sidebar-toggle d-flex mr-2">
+					<i class="hamburger align-self-center"></i>
+				</a>
+
+				<form class="form-inline d-none d-sm-inline-block">
+					<input class="form-control form-control-lite" type="text" placeholder="Search projects...">
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown active">
+							<a class="nav-link dropdown-toggle position-relative" href="#" id="messagesDropdown" data-toggle="dropdown">
+								<i class="align-middle fas fa-envelope-open"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="messagesDropdown">
+								<div class="dropdown-menu-header">
+									<div class="position-relative">
+										4 New Messages
+									</div>
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Michelle Bilodeau">
+											</div>
+											<div class="col-10 pl-2">
+												<div class="text-dark">Michelle Bilodeau</div>
+												<div class="text-muted small mt-1">Nam pretium turpis et arcu. Duis arcu tortor.</div>
+												<div class="text-muted small mt-1">5m ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Kathie Burton">
+											</div>
+											<div class="col-10 pl-2">
+												<div class="text-dark">Kathie Burton</div>
+												<div class="text-muted small mt-1">Pellentesque auctor neque nec urna.</div>
+												<div class="text-muted small mt-1">30m ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="Alexander Groves">
+											</div>
+											<div class="col-10 pl-2">
+												<div class="text-dark">Alexander Groves</div>
+												<div class="text-muted small mt-1">Curabitur ligula sapien euismod vitae.</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<img src="img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Daisy Seger">
+											</div>
+											<div class="col-10 pl-2">
+												<div class="text-dark">Daisy Seger</div>
+												<div class="text-muted small mt-1">Aenean tellus metus, bibendum sed, posuere ac, mattis non.</div>
+												<div class="text-muted small mt-1">5h ago</div>
+											</div>
+										</div>
 									</a>
 								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all messages</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown ml-lg-2">
+							<a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" data-toggle="dropdown">
+								<i class="align-middle fas fa-bell"></i>
+								<span class="indicator"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									4 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<i class="ml-1 text-danger fas fa-fw fa-bell"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Update completed</div>
+												<div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+												<div class="text-muted small mt-1">2h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<i class="ml-1 text-warning fas fa-fw fa-envelope-open"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Lorem ipsum</div>
+												<div class="text-muted small mt-1">Aliquam ex eros, imperdiet vulputate hendrerit et.</div>
+												<div class="text-muted small mt-1">6h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<i class="ml-1 text-primary fas fa-fw fa-building"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Login from 192.186.1.1</div>
+												<div class="text-muted small mt-1">8h ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row no-gutters align-items-center">
+											<div class="col-2">
+												<i class="ml-1 text-success fas fa-fw fa-bell-slash"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">New connection</div>
+												<div class="text-muted small mt-1">Anna accepted your request.</div>
+												<div class="text-muted small mt-1">12h ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Show all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown ml-lg-2">
+							<a class="nav-link dropdown-toggle position-relative" href="#" id="userDropdown" data-toggle="dropdown">
+								<i class="align-middle fas fa-cog"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#"><i class="align-middle mr-1 fas fa-fw fa-user"></i> View Profile</a>
+								<a class="dropdown-item" href="#"><i class="align-middle mr-1 fas fa-fw fa-comments"></i> Contacts</a>
+								<a class="dropdown-item" href="#"><i class="align-middle mr-1 fas fa-fw fa-chart-pie"></i> Analytics</a>
+								<a class="dropdown-item" href="#"><i class="align-middle mr-1 fas fa-fw fa-cogs"></i> Settings</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#"><i class="align-middle mr-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
 
-								<h1 class="display-4 font-weight-bold mb-3 text-white">Modern, Flexible and Responsive Bootstrap Admin Template</h1>
-								<p class="lead font-weight-light mb-3 landing-text">A professional package that comes with hunderds of UI components, forms,
-									tables, charts, dashboards, pages and svg icons.
-									Each one is fully customizable, responsive and easy to use.</p>
+			</nav>
+			<main class="content">
+				<div class="container-fluid">
 
-								<div class="my-4">
-									<img src="img/brands/bootstrap.svg" alt="Bootstrap" width="40" class="align-middle mr-2" />
-									<img src="img/brands/sass.svg" alt="Sass" width="40" class="align-middle mr-2" />
-									<img src="img/brands/webpack.svg" alt="Webpack" width="40" class="align-middle mr-2" />
-									<img src="img/brands/npm.svg" alt="NPM" width="40" class="align-middle mr-2" />
-									<img src="img/brands/jquery.svg" alt="jQuery" width="80" class="align-middle" />
+					<div class="header">
+						<h1 class="header-title">
+							Welcome back, Linda!
+						</h1>
+						<p class="header-subtitle">You have 24 new messages and 5 new notifications.</p>
+					</div>
+
+					<div class="row">
+						<div class="col-xl-6 col-xxl-7">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Recent Movement</h5>
+								</div>
+								<div class="card-body py-3">
+									<div class="chart chart-sm">
+										<canvas id="chartjs-dashboard-line"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-6 col-xxl-5 d-flex">
+							<?php 
+							include("./Config/db.php");
+							$sql = "SELECT * FROM Users";
+							$result = mysqli_query($conn, $sql);
+							$row = mysqli_num_rows($result); 
+							?>
+							<div class="w-100">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Total Users</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="avatar">
+															<div class="avatar-title rounded-circle bg-primary-dark">
+																<i class="align-middle" data-feather="truck"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<h1 class="display-5 mt-1 mb-3"><?php echo $row ?></h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -2.65% </span>
+													Less sales than usual
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Visitors Today</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="avatar">
+															<div class="avatar-title rounded-circle bg-primary-dark">
+																<i class="align-middle" data-feather="users"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<h1 class="display-5 mt-1 mb-3"><?php echo $row ?></h1>
+												<div class="mb-0">
+													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 5.50% </span>
+													More visitors than usual
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Top Levels</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="avatar">
+															<div class="avatar-title rounded-circle bg-primary-dark">
+																<i class="align-middle" data-feather="dollar-sign"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<h1 class="display-5 mt-1 mb-3">$24.300</h1>
+												<div class="mb-0">
+													<span class="text-success"> <i class="mdi mdi-arrow-bottom-right"></i> 8.35% </span>
+													More earnings than usual
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">Pending Orders</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="avatar">
+															<div class="avatar-title rounded-circle bg-primary-dark">
+																<i class="align-middle" data-feather="shopping-cart"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+												<h1 class="display-5 mt-1 mb-3">43</h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -4.25% </span>
+													Less orders than usual
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<div class="py-3 bg-white landing-nav">
-		<div class="container text-center">
-			<a target="_blank" href="dashboard-default.html" class="btn btn-lg btn-pill btn-primary">Preview</a>
-			<a target="_blank" href="docs-getting-started.html" class="btn btn-lg btn-pill btn-link text-dark">Documentation</a>
-			<a target="_blank" href="docs-changelog.html" class="btn btn-lg btn-pill btn-link text-dark">Changelog</a>
-			<a target="_blank" href="mailto:support@bootlab.io" class="btn btn-lg btn-pill btn-link text-dark">Support</a>
+					<div class="row">
+						<div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
+							<div class="card flex-fill">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Calendar</h5>
+								</div>
+								<div class="card-body d-flex">
+									<div class="align-self-center w-100">
+										<div class="chart">
+											<div id="datetimepicker-dashboard"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-12 col-xxl-6 d-flex order-3 order-xxl-2">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Current Visitors</h5>
+								</div>
+								<div class="card-body px-4">
+									<div id="world_map" style="height:350px;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-xxl-3 d-flex order-2 order-xxl-3">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">System Usage</h5>
+								</div>
+								<div class="card-body d-flex">
+									<div class="align-self-center w-100">
+										<div class="py-3">
+											<div class="chart chart-xs">
+												<canvas id="chartjs-dashboard-pie"></canvas>
+											</div>
+										</div>
+
+										<table class="table mb-0">
+											<tbody>
+												<tr>
+													<td><i class="fas fa-circle text-primary fa-fw"></i> Android</td>
+													<td class="text-right"><?php echo $row  ?></td>
+												</tr>
+												<tr>
+													<td><i class="fas fa-circle text-warning fa-fw"></i> ios</td>
+													<td class="text-right"><?php echo $row ?></td>
+												</tr>
+												<tr>
+													<td><i class="fas fa-circle text-danger fa-fw"></i> other</td>
+													<td class="text-right"><?php echo $row ?></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Users</h5>
+								</div>
+								<table id="datatables-dashboard-projects" class="table table-striped my-0">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th class="d-none d-xl-table-cell">Login</th>
+											<th class="d-none d-xl-table-cell">Password</th>
+											<th>Email</th>
+											<th class="d-none d-md-table-cell">Date Invited</th>
+											<th>Role</th>
+									
+											<th>Delete</th>
+										</tr>
+
+									</thead>
+								<tbody>
+								<?php
+
+include("config/db.php");
+
+$sql = "SELECT * FROM Users";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+// output data of each row
+while($row = mysqli_fetch_assoc($result)) {	
+	?>
+	<tr>
+		<td><?php echo $row['Name']; ?></td>
+		<td><?php echo $row['loggin'] ?></td>
+		<td><?php echo $row['passowrd'] ?></td>
+		<td><?php echo $row['email'] ?></td>
+		<td><?php echo $row['Dateinv'] ?></td>
+
+		<?php
+		if ($row["Role"] == 0)
+			echo "<td >Users</td>";
+		else{
+			echo "<td>Admin</td>";
+		}
+		?>
+		<td><a class='btn btn-danger' href="delete_user.php?id=<?php echo $row['id']; ?>" ><i class='fa fa-trash' aria-hidden='true'></i>Delete</a> </td>
+	</tr>
+<?php	}
+} else {
+echo "0 results";
+}
+
+mysqli_close($conn);
+?>
+								</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 col-xxl-3 d-flex">
+							<div class="card flex-fill w-100">
+								<div class="card-header">
+									<div class="card-actions float-right">
+										<a href="#" class="mr-1">
+											<i class="align-middle" data-feather="refresh-cw"></i>
+										</a>
+										<div class="d-inline-block dropdown show">
+											<a href="#" data-toggle="dropdown" data-display="static">
+												<i class="align-middle" data-feather="more-vertical"></i>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#">Action</a>
+												<a class="dropdown-item" href="#">Another action</a>
+												<a class="dropdown-item" href="#">Something else here</a>
+											</div>
+										</div>
+									</div>
+									<h5 class="card-title mb-0">Monthly Sales</h5>
+								</div>
+								<div class="card-body d-flex w-100">
+									<div class="align-self-center chart chart-lg">
+										<canvas id="chartjs-dashboard-bar"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</main>
 		</div>
+
 	</div>
-
-	<section class="py-6">
-		<div class="container">
-			<div class="mb-4 text-center">
-				<h2>Multiple demos</h2>
-				<p class="text-muted">Multiple color schemes & dashboard layouts available to make this template your very own.</p>
-			</div>
-
-			<div class="row pb-3">
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-default.html?theme=modern" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/modern.png" class="img-fluid card-img-hover landing-img" alt="Modern Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>Modern Theme</h4>
-				</div>
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-default.html?theme=light" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/light.png" class="img-fluid card-img-hover landing-img" alt="Light Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>Light Theme</h4>
-				</div>
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-default.html?theme=dark" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/dark.png" class="img-fluid card-img-hover landing-img" alt="Dark Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>Dark Theme</h4>
-				</div>
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-default.html" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/dashboard-default.png" class="img-fluid card-img-hover landing-img"
-								alt="Default Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>Default Dashboard</h4>
-				</div>
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-analytics.html" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/dashboard-analytics.png" class="img-fluid card-img-hover landing-img"
-								alt="Analytics Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>Analytics Dashboard</h4>
-				</div>
-				<div class="col-md-6 col-lg-4 text-center">
-					<a class="mb-3 card overflow-hidden" href="dashboard-e-commerce.html" target="_blank">
-						<div class="px-4 pt-4">
-							<img src="img/screenshots/dashboard-e-commerce.png" class="img-fluid card-img-hover landing-img"
-								alt="E-Commerce Bootstrap 4 Dashboard Theme" />
-						</div>
-					</a>
-					<h4>E-commerce Dashboard</h4>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-6 bg-white">
-		<div class="container">
-
-			<div class="mb-4 text-center">
-				<h2>Testimonials</h2>
-				<p class="text-muted">Here's what some of our 3,000 customers have to say about working with our products.</p>
-			</div>
-
-			<div class="row">
-				<div class="col-md-6 col-lg-4">
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Nikita</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“We are totally amazed with a simplicity and the design of the template. Probably saved us hundreds of hours of
-								development. We are absolutely amazed with the support Bootlab has provided us.”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Jason</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“As a DB guy, this template has made my life easy porting over an old website to a new responsive version. I
-								can focus more on the data and less on the layout.”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Alejandro</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“Everything is so properly set up that any new additions I'd make would feel like a native extension of the
-								theme versus a simple hack. I definitely feel like this will save me hundredths of hours I'd otherwise spend on designing.”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Richard</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“This template was just what we were after; its modern, works perfectly and is visually beautiful , we couldn't
-								be happier. The support really is excellent, I look forward to working with these guys for a long time to come!”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-				</div>
-				<div class="col-md-6 col-lg-4 d-block d-md-none d-lg-block">
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Jordi</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“I ran into a problem and contacted support. Within 24 hours, I not only received a response but even an
-								updated version that solved my problem and works like a charm. Fantastic customer service!”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-					<blockquote class="card border">
-						<div class="card-body p-4">
-							<div class="d-flex align-items-center mb-3">
-								<div>
-									<img src="img/brands/b.svg" width="48" height="48" alt="Bootstrap" />
-								</div>
-								<div class="pl-3">
-									<h5 class="mb-1 mt-2">Martin</h5><small class="d-block text-muted h5 font-weight-normal">Bootstrap Themes</small>
-								</div>
-							</div>
-							<p class="lead mb-2">“I just began to test and use this theme and I can find that it cover my expectatives. Good support from the
-								developer.”</p>
-
-							<div class="landing-stars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</blockquote>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="py-5">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-6 mx-auto">
-					<h2 class="mb-3">
-						Join over 3,000 developers who are already working with our products
-					</h2>
-					<a href="https://themes.getbootstrap.com/product/spark-responsive-admin-template/" target="_blank"
-						class="align-middle btn btn-success btn-lg mt-n1">
-						Purchase Now
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<svg width="0" height="0" style="position:absolute">
 		<defs>
@@ -313,6 +594,206 @@
 		</defs>
 	</svg>
 	<script src="js/app.js"></script>
+
+	<script>
+		$(function() {
+			// Line chart
+			new Chart(document.getElementById("chartjs-dashboard-line"), {
+				type: 'line',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+							label: "Orders",
+							fill: true,
+							backgroundColor: window.theme.primary,
+							borderColor: window.theme.primary,
+							borderWidth: 2,
+							data: [3, 2, 3, 5, 6, 5, 4, 6, 9, 10, 8, 9]
+						},
+						{
+							label: "Sales ($)",
+							fill: true,
+							backgroundColor: "rgba(0, 0, 0, 0.05)",
+							borderColor: "rgba(0, 0, 0, 0.05)",
+							borderWidth: 2,
+							data: [5, 4, 10, 15, 16, 12, 10, 13, 20, 22, 18, 20]
+						}
+					]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					tooltips: {
+						intersect: false
+					},
+					hover: {
+						intersect: true
+					},
+					plugins: {
+						filler: {
+							propagate: false
+						}
+					},
+					elements: {
+						point: {
+							radius: 0
+						}
+					},
+					scales: {
+						xAxes: [{
+							reverse: true,
+							gridLines: {
+								color: "rgba(0,0,0,0.0)"
+							}
+						}],
+						yAxes: [{
+							ticks: {
+								stepSize: 5
+							},
+							display: true,
+							gridLines: {
+								color: "rgba(0,0,0,0)",
+								fontColor: "#fff"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			// Pie chart
+			new Chart(document.getElementById("chartjs-dashboard-pie"), {
+				type: 'pie',
+				data: {
+					labels: ["Chrome", "Firefox", "IE", "Other"],
+					datasets: [{
+						data: [4401, 4003, 1589],
+						backgroundColor: [
+							window.theme.primary,
+							window.theme.warning,
+							window.theme.danger,
+							"#E8EAED"
+						],
+						borderColor: "transparent"
+					}]
+				},
+				options: {
+					responsive: !window.MSInputMethodContext,
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					cutoutPercentage: 75
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			// Bar chart
+			new Chart(document.getElementById("chartjs-dashboard-bar"), {
+				type: 'bar',
+				data: {
+					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+					datasets: [{
+						label: "This year",
+						backgroundColor: window.theme.primary,
+						borderColor: window.theme.primary,
+						hoverBackgroundColor: window.theme.primary,
+						hoverBorderColor: window.theme.primary,
+						data: [10, 10, 10, 25, 12, 22, 15, 13, 20, 26, 28, 19],
+						barPercentage: .75,
+						categoryPercentage: .5
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					legend: {
+						display: false
+					},
+					scales: {
+						yAxes: [{
+							gridLines: {
+								display: false
+							},
+							stacked: false,
+							ticks: {
+								stepSize: 20
+							}
+						}],
+						xAxes: [{
+							stacked: false,
+							gridLines: {
+								color: "transparent"
+							}
+						}]
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			var mapData = {
+				"US": 298,
+				"SA": 200,
+				"DE": 220,
+				"FR": 540,
+				"CN": 120,
+				"AU": 760,
+				"BR": 550,
+				"IN": 200,
+				"GB": 120,
+			};
+			$('#world_map').vectorMap({
+				map: 'world_mill',
+				backgroundColor: "transparent",
+				zoomOnScroll: false,
+				regionStyle: {
+					initial: {
+						fill: '#e4e4e4',
+						"fill-opacity": 0.9,
+						stroke: 'none',
+						"stroke-width": 0,
+						"stroke-opacity": 0
+					}
+				},
+				series: {
+					regions: [{
+						values: mapData,
+						scale: [window.theme.primary],
+						normalizeFunction: 'polynomial'
+					}]
+				},
+			});
+			setTimeout(function() {
+				$(window).trigger('resize');
+			}, 350)
+		})
+	</script>
+	<script>
+		$(function() {
+			$('#datatables-dashboard-projects').DataTable({
+				pageLength: 6,
+				lengthChange: false,
+				bFilter: false,
+				autoWidth: false
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$('#datetimepicker-dashboard').datetimepicker({
+				inline: true,
+				sideBySide: false,
+				format: 'L'
+			});
+		});
+	</script>
 
 </body>
 
