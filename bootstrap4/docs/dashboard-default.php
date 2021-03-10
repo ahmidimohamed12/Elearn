@@ -52,7 +52,8 @@
 							<i class="align-middle mr-2 fas fa-fw fa-flask"></i> <span class="align-middle">User Interface</span>
 						</a>
 						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Cours</a></li>
+						<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Users</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="user.php">Cours</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Categorie Cours</a></li>
 							<li class="sidebar-item"><a class="sidebar-link" href="ui-cards.html">Cours Page</a></li>
 							</li>
